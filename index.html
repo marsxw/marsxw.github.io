@@ -3,74 +3,518 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>茂名市仟鑫科技 | 工业控制与机器人研发</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="茂名市仟鑫科技 — 工业控制、底盘与机械臂定制方案与案例展示">
+    <title>仟鑫科技 | 官网案例展示</title>
     <style>
+        :root {
+            --bg: #0f1419;
+            --surface: #1a222d;
+            --surface-hover: #232e3d;
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #e8edf4;
+            --muted: #8b9cb3;
+            --accent: #3db39e;
+            --accent-dim: rgba(61, 179, 158, 0.15);
+            --radius: 12px;
+            --font: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: sans-serif;
+            margin: 0;
+            font-family: var(--font);
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            color: var(--text);
+            background: var(--bg);
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .wrap {
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px 64px;
         }
 
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 40px;
-            text-align: center;
-            border-radius: 8px;
+        /* Nav */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(15, 20, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
         }
 
-        .business {
+        nav .inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 14px 20px;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            margin-top: 30px;
+            gap: 16px;
         }
 
-        .card {
-            border: 1px solid #ddd;
-            padding: 15px;
-            width: 22%;
-            border-radius: 5px;
+        nav .brand {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .brand:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        nav a:not(.brand) {
+            color: var(--muted);
+            font-size: 0.92rem;
+            text-decoration: none;
+        }
+
+        nav a:not(.brand):hover {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 56px;
             text-align: center;
+            border-bottom: 1px solid var(--border);
         }
 
-        .contact {
-            background: #f4f4f4;
+        .hero .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            background: var(--accent-dim);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            margin: 0 0 16px;
+            font-size: clamp(1.75rem, 4vw, 2.35rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p.lead {
+            margin: 0 auto;
+            max-width: 560px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* Section */
+        section.block {
+            padding-top: 56px;
+        }
+
+        section.block h2 {
+            margin: 0 0 8px;
+            font-size: 1.45rem;
+            letter-spacing: -0.02em;
+        }
+
+        section.block .sub {
+            margin: 0 0 28px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .services article {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
             padding: 20px;
-            margin-top: 40px;
-            border-radius: 8px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .services article:hover {
+            background: var(--surface-hover);
+            border-color: rgba(61, 179, 158, 0.25);
+        }
+
+        .services h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+        }
+
+        .services p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        /* Cases filter */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .filters button {
+            font-family: inherit;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--muted);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .filters button:hover {
+            color: var(--text);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .filters button.active {
+            background: var(--accent-dim);
+            color: var(--accent);
+            border-color: rgba(61, 179, 158, 0.35);
+        }
+
+        /* Case grid */
+        .cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 18px;
+        }
+
+        .case-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .case-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(61, 179, 158, 0.3);
+        }
+
+        .case-card.hidden {
+            display: none;
+        }
+
+        .case-thumb {
+            aspect-ratio: 16 / 10;
+            background: linear-gradient(145deg, #1e2a38 0%, #152028 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .case-body {
+            padding: 18px 18px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+            background: var(--accent-dim);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .case-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+        }
+
+        .case-card p.desc {
+            margin: 0 0 14px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            flex: 1;
+        }
+
+        .case-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: 0.88rem;
+        }
+
+        .case-links span.nolink {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* Contact */
+        .contact {
+            margin-top: 56px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+        }
+
+        .contact h2 {
+            margin: 0 0 16px;
+            font-size: 1.25rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 12px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-grid strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>茂名市仟鑫科技</h1>
-        <p>专注电路研发、底盘开发、机械臂与定制化工控方案</p>
+    <nav>
+        <div class="inner">
+            <a class="brand" href="#">仟鑫科技</a>
+            <ul>
+                <li><a href="#services">业务方向</a></li>
+                <li><a href="#cases">案例展示</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap">
+            <span class="badge">marsxw.github.io · 案例展示页</span>
+            <h1>茂名市仟鑫科技</h1>
+            <p class="lead">工业控制、底盘开发、机械臂与电路定制 — 以下为代表性项目与交付案例，可按类别筛选浏览。</p>
+        </div>
     </header>
 
-    <section class="business">
-        <div class="card">
-            <h3>电路设计</h3>
-        </div>
-        <div class="card">
-            <h3>工业控制</h3>
-        </div>
-        <div class="card">
-            <h3>底盘开发</h3>
-        </div>
-        <div class="card">
-            <h3>机械臂开发</h3>
-        </div>
-    </section>
+    <main class="wrap">
+        <section id="services" class="block">
+            <h2>业务方向</h2>
+            <p class="sub">从硬件到整机集成，覆盖研发与落地交付。</p>
+            <div class="services">
+                <article>
+                    <h3>电路设计</h3>
+                    <p>原理图、PCB、嵌入式软硬件协同。</p>
+                </article>
+                <article>
+                    <h3>工业控制</h3>
+                    <p>PLC/运动控制、通信与时序可靠性。</p>
+                </article>
+                <article>
+                    <h3>底盘开发</h3>
+                    <p>移动平台结构、驱动与导航接口预留。</p>
+                </article>
+                <article>
+                    <h3>机械臂开发</h3>
+                    <p>机构、电控与上位机联调。</p>
+                </article>
+            </div>
+        </section>
 
-    <section class="contact">
-        <h2>联系我们</h2>
-        <p>地址：广东省茂名市化州市新华北路盛景商务大厦 203</p>
-        <p>电话：13275638808</p>
-    </section>
+        <section id="cases" class="block">
+            <h2>案例展示</h2>
+            <p class="sub">示例条目可直接在页面源码中替换为真实项目名称、截图与外链。</p>
+
+            <div class="filters" role="tablist" aria-label="案例分类">
+                <button type="button" class="active" data-filter="all">全部</button>
+                <button type="button" data-filter="工控">工控</button>
+                <button type="button" data-filter="移动平台">移动平台</button>
+                <button type="button" data-filter="机械臂">机械臂</button>
+                <button type="button" data-filter="电路">电路</button>
+            </div>
+
+            <div class="cases">
+                <article class="case-card" data-category="工控">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">工控</span>
+                        </div>
+                        <h3>产线节拍与 IO 扩展柜改造</h3>
+                        <p class="desc">为客户的灌装线增加远程 IO 与上位机监控，缩短停机排查时间，文档与接线规范一并交付。</p>
+                        <div class="case-links">
+                            <span class="nolink">内部案例 · 无公开链接</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="移动平台">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">移动平台</span>
+                        </div>
+                        <h3>差速底盘电控与中位机协议</h3>
+                        <p class="desc">定制 CAN 驱动层与 ROS 话题封装示例，便于二次开发导航与调度。</p>
+                        <div class="case-links">
+                            <span class="nolink">可提供演示视频（替换此处）</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="机械臂">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">机械臂</span>
+                        </div>
+                        <h3>轻型协作臂抓取工作站</h3>
+                        <p class="desc">末端工装与视觉点位标定流程固化，交付标定工具链与操作说明。</p>
+                        <div class="case-links">
+                            <span class="nolink">内部案例 · 无公开链接</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="电路">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">电路</span>
+                        </div>
+                        <h3>多路传感器采集小板</h3>
+                        <p class="desc">低噪声前端与隔离电源分区，适配现场 EMC 要求；提供 BOM 与测试报告模板。</p>
+                        <div class="case-links">
+                            <span class="nolink">内部案例 · 无公开链接</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="工控">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">工控</span>
+                        </div>
+                        <h3>仓储 AGV 调度对接原型</h3>
+                        <p class="desc">与 WCS 对接的任务队列与路网占位逻辑验证，用于招标前的可行性演示。</p>
+                        <div class="case-links">
+                            <span class="nolink">演示环境（替换为链接）</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-category="移动平台">
+                    <div class="case-thumb">示意图 · 可换成项目截图</div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <span class="tag">移动平台</span>
+                        </div>
+                        <h3>麦克纳姆轮全向底盘调试</h3>
+                        <p class="desc">轮速解算与遥控器映射标定，场地试运行数据归档。</p>
+                        <div class="case-links">
+                            <span class="nolink">内部案例 · 无公开链接</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>联系我们</h2>
+            <div class="contact-grid">
+                <p><strong>地址</strong>　广东省茂名市化州市新华北路盛景商务大厦 203</p>
+                <p><strong>电话</strong>　<a href="tel:13275638808">13275638808</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 茂名市仟鑫科技 · 本站托管于 GitHub Pages（marsxw.github.io）
+    </footer>
+
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll(".filters button");
+            var cards = document.querySelectorAll(".case-card");
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var filter = btn.getAttribute("data-filter");
+
+                    buttons.forEach(function (b) { b.classList.remove("active"); });
+                    btn.classList.add("active");
+
+                    cards.forEach(function (card) {
+                        var cat = card.getAttribute("data-category");
+                        var show = filter === "all" || cat === filter;
+                        card.classList.toggle("hidden", !show);
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>
