@@ -285,34 +285,124 @@
             font-size: 0.85rem;
         }
 
-        /* Contact */
-        .contact {
-            margin-top: 56px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 28px 24px;
+        /* Contact footer */
+        .site-contact {
+            margin-top: 48px;
+            padding: 28px 0 40px;
+            border-top: 1px solid var(--border);
+            background: linear-gradient(180deg, transparent 0%, rgba(61, 179, 158, 0.04) 40%, transparent 100%);
         }
 
-        .contact h2 {
-            margin: 0 0 16px;
-            font-size: 1.25rem;
-            text-align: center;
+        .site-contact-inner {
+            max-width: 920px;
+            margin: 0 auto;
         }
 
-        .contact-grid {
-            display: grid;
-            gap: 12px;
-            color: var(--muted);
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        .contact-grid strong {
+        .site-contact-title {
+            margin: 0 0 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--text);
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .site-contact-cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .site-contact-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: rgba(26, 34, 45, 0.65);
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+            flex: 1 1 260px;
+            min-width: min(100%, 240px);
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .site-contact-card--address {
+            flex: 2 1 340px;
+        }
+
+        .site-contact-card--phone {
+            flex: 1 1 200px;
+            min-width: min(100%, 200px);
+        }
+
+        .site-contact-card:hover {
+            border-color: rgba(61, 179, 158, 0.35);
+            background: var(--surface-hover);
+            transform: translateY(-1px);
+        }
+
+        .site-contact-card:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .site-contact-icon {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--accent-dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .site-contact-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .site-contact-card-body {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            text-align: left;
+        }
+
+        .site-contact-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.07em;
+            color: var(--accent);
             font-weight: 600;
         }
 
+        .site-contact-value {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.45;
+            overflow-wrap: anywhere;
+        }
+
+        .site-contact-arrow {
+            flex-shrink: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .site-contact-card:hover .site-contact-arrow {
+            color: var(--accent);
+            transform: translateX(2px);
+        }
     </style>
 </head>
 
@@ -359,6 +449,25 @@
             </div>
 
             <div class="cases">
+                <article class="case-card" data-category="机械臂">
+                    <a class="case-card-link" href="cases/251202机械手控制.html">
+                        <div class="case-thumb">
+                            <img src="assets/251202机械手控制/cover.jpg" alt="机械手控制项目封面" width="1600" height="1000"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">机械臂</span>
+                            </div>
+                            <h3>机械手控制（251202）</h3>
+                            <p class="desc">机械手运动与控制相关交付；简介可按实际项目改写。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
                 <article class="case-card" data-category="工控">
                     <a class="case-card-link" href="cases/260310真空控压算法.html">
                         <div class="case-thumb">
@@ -485,13 +594,43 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>联系我们</h2>
-            <div class="contact-grid">
-                <p><strong>地址</strong>　<a href="https://uri.amap.com/marker?position=110.6314,21.6632&amp;name=%E7%9B%9B%E6%99%AF%E5%95%86%E5%8A%A1%E5%A4%A7%E5%8E%A6203&amp;src=marsxw.github.io&amp;coordinate=gaode&amp;callnative=0" target="_blank" rel="noopener">广东省茂名市化州市新华北路盛景商务大厦 203</a></p>
-                <p><strong>电话</strong>　<a href="tel:13275638808">13275638808</a></p>
+        <footer id="contact" class="site-contact">
+            <div class="site-contact-inner">
+                <h2 class="site-contact-title">联系我们</h2>
+                <div class="site-contact-cards">
+                    <a class="site-contact-card site-contact-card--address"
+                        href="https://uri.amap.com/marker?position=110.6314,21.6632&amp;name=%E7%9B%9B%E6%99%AF%E5%95%86%E5%8A%A1%E5%A4%A7%E5%8E%A6203&amp;src=marsxw.github.io&amp;coordinate=gaode&amp;callnative=0"
+                        target="_blank" rel="noopener" aria-label="在高德地图打开公司地址">
+                        <span class="site-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z" />
+                                <circle cx="12" cy="10" r="2.5" />
+                            </svg>
+                        </span>
+                        <span class="site-contact-card-body">
+                            <span class="site-contact-label">地址</span>
+                            <span class="site-contact-value">广东省茂名市化州市新华北路盛景商务大厦 203</span>
+                        </span>
+                        <span class="site-contact-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="site-contact-card site-contact-card--phone" href="tel:13275638808" aria-label="拨打电话 13275638808">
+                        <span class="site-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>
+                        </span>
+                        <span class="site-contact-card-body">
+                            <span class="site-contact-label">电话</span>
+                            <span class="site-contact-value">13275638808</span>
+                        </span>
+                        <span class="site-contact-arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </footer>
     </main>
 
     <script>
