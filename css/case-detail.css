@@ -130,7 +130,9 @@ nav .brand:hover {
 }
 
 .figure-video {
-    margin: 0;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--border);
