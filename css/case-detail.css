@@ -129,6 +129,21 @@ nav .brand:hover {
     font-size: 0.9rem;
 }
 
+.figure-video {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #0a0d11;
+}
+
+.figure-video video {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: block;
+}
+
 section.block {
     margin-bottom: 28px;
 }
