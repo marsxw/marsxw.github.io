@@ -233,6 +233,24 @@
             transition: transform 0.2s, border-color 0.2s;
         }
 
+        .case-card-link {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 0;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .case-card-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .case-card-link:hover h3 {
+            color: var(--accent);
+        }
+
         .case-card:hover {
             transform: translateY(-3px);
             border-color: rgba(61, 179, 158, 0.3);
@@ -310,6 +328,11 @@
             font-size: 0.85rem;
         }
 
+        .case-links span.go-detail {
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+
         /* Contact */
         .contact {
             margin-top: 56px;
@@ -349,7 +372,7 @@
 <body>
     <nav>
         <div class="inner">
-            <a class="brand" href="#">仟鑫科技</a>
+            <a class="brand" href="index.html">仟鑫科技</a>
             <ul>
                 <li><a href="#services">业务方向</a></li>
                 <li><a href="#cases">案例展示</a></li>
@@ -404,93 +427,105 @@
 
             <div class="cases">
                 <article class="case-card" data-category="工控">
-                    <div class="case-thumb">
-                        <img src="assets/260310真空控压算法/cover.jpg" alt="真空控压算法项目封面" width="1600" height="1000" loading="lazy" decoding="async">
-                    </div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">工控</span>
+                    <a class="case-card-link" href="cases/vacuum-260310.html">
+                        <div class="case-thumb">
+                            <img src="assets/260310真空控压算法/cover.jpg" alt="真空控压算法项目封面" width="1600" height="1000" loading="lazy" decoding="async">
                         </div>
-                        <h3>真空控压算法（260310）</h3>
-                        <p class="desc">真空环境下的压力控制与算法调试相关交付；可按实际合同补充一句对外表述。</p>
-                        <div class="case-links">
-                            <span class="nolink">内部案例 · 无公开链接</span>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">工控</span>
+                            </div>
+                            <h3>真空控压算法（260310）</h3>
+                            <p class="desc">真空环境下的压力控制与算法调试相关交付；可按实际合同补充一句对外表述。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </article>
 
                 <article class="case-card" data-category="机械臂">
-                    <div class="case-thumb">
-                        <img src="assets/260415蘑菇采摘机器人/cover.jpg" alt="蘑菇采摘机器人项目封面" width="1600" height="1000" loading="lazy" decoding="async">
-                    </div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">机械臂</span>
+                    <a class="case-card-link" href="cases/mushroom-robot-260415.html">
+                        <div class="case-thumb">
+                            <img src="assets/260415蘑菇采摘机器人/cover.jpg" alt="蘑菇采摘机器人项目封面" width="1600" height="1000" loading="lazy" decoding="async">
                         </div>
-                        <h3>蘑菇采摘机器人（260415）</h3>
-                        <p class="desc">采摘执行机构与电控联调类项目；简介可按验收范围自行改写。</p>
-                        <div class="case-links">
-                            <span class="nolink">内部案例 · 无公开链接</span>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">机械臂</span>
+                            </div>
+                            <h3>蘑菇采摘机器人（260415）</h3>
+                            <p class="desc">采摘执行机构与电控联调类项目；简介可按验收范围自行改写。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </article>
 
                 <article class="case-card" data-category="电路">
-                    <div class="case-thumb">
-                        <img src="assets/260510_阻值分析仪/cover.jpg" alt="阻值分析仪项目封面" width="1600" height="1000" loading="lazy" decoding="async">
-                    </div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">电路</span>
+                    <a class="case-card-link" href="cases/resistance-analyzer-260510.html">
+                        <div class="case-thumb">
+                            <img src="assets/260510_阻值分析仪/cover.jpg" alt="阻值分析仪项目封面" width="1600" height="1000" loading="lazy" decoding="async">
                         </div>
-                        <h3>阻值分析仪（260510）</h3>
-                        <p class="desc">阻值测量与分析相关硬件或整机交付；描述可替换为对外宣传用语。</p>
-                        <div class="case-links">
-                            <span class="nolink">内部案例 · 无公开链接</span>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">电路</span>
+                            </div>
+                            <h3>阻值分析仪（260510）</h3>
+                            <p class="desc">阻值测量与分析相关硬件或整机交付；描述可替换为对外宣传用语。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </article>
 
                 <article class="case-card" data-category="电路">
-                    <div class="case-thumb">示意图 · 可换成项目截图</div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">电路</span>
+                    <a class="case-card-link" href="cases/sensor-board-demo.html">
+                        <div class="case-thumb">示意图 · 可换成项目截图</div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">电路</span>
+                            </div>
+                            <h3>多路传感器采集小板</h3>
+                            <p class="desc">低噪声前端与隔离电源分区，适配现场 EMC 要求；提供 BOM 与测试报告模板。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                        <h3>多路传感器采集小板</h3>
-                        <p class="desc">低噪声前端与隔离电源分区，适配现场 EMC 要求；提供 BOM 与测试报告模板。</p>
-                        <div class="case-links">
-                            <span class="nolink">内部案例 · 无公开链接</span>
-                        </div>
-                    </div>
+                    </a>
                 </article>
 
                 <article class="case-card" data-category="工控">
-                    <div class="case-thumb">示意图 · 可换成项目截图</div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">工控</span>
+                    <a class="case-card-link" href="cases/agv-scheduling-demo.html">
+                        <div class="case-thumb">示意图 · 可换成项目截图</div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">工控</span>
+                            </div>
+                            <h3>仓储 AGV 调度对接原型</h3>
+                            <p class="desc">与 WCS 对接的任务队列与路网占位逻辑验证，用于招标前的可行性演示。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                        <h3>仓储 AGV 调度对接原型</h3>
-                        <p class="desc">与 WCS 对接的任务队列与路网占位逻辑验证，用于招标前的可行性演示。</p>
-                        <div class="case-links">
-                            <span class="nolink">演示环境（替换为链接）</span>
-                        </div>
-                    </div>
+                    </a>
                 </article>
 
                 <article class="case-card" data-category="移动平台">
-                    <div class="case-thumb">示意图 · 可换成项目截图</div>
-                    <div class="case-body">
-                        <div class="case-meta">
-                            <span class="tag">移动平台</span>
+                    <a class="case-card-link" href="cases/mecanum-chassis-demo.html">
+                        <div class="case-thumb">示意图 · 可换成项目截图</div>
+                        <div class="case-body">
+                            <div class="case-meta">
+                                <span class="tag">移动平台</span>
+                            </div>
+                            <h3>麦克纳姆轮全向底盘调试</h3>
+                            <p class="desc">轮速解算与遥控器映射标定，场地试运行数据归档。</p>
+                            <div class="case-links">
+                                <span class="go-detail">查看详情 →</span>
+                            </div>
                         </div>
-                        <h3>麦克纳姆轮全向底盘调试</h3>
-                        <p class="desc">轮速解算与遥控器映射标定，场地试运行数据归档。</p>
-                        <div class="case-links">
-                            <span class="nolink">内部案例 · 无公开链接</span>
-                        </div>
-                    </div>
+                    </a>
                 </article>
             </div>
         </section>
