@@ -50,8 +50,7 @@ nav .inner {
     padding: 14px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
 }
 
 nav .brand {
@@ -62,16 +61,6 @@ nav .brand {
 }
 
 nav .brand:hover {
-    color: var(--accent);
-}
-
-nav .contact-link {
-    color: var(--muted);
-    font-size: 0.92rem;
-    text-decoration: none;
-}
-
-nav .contact-link:hover {
     color: var(--accent);
 }
 
@@ -170,10 +159,3 @@ section.block code {
     border: 1px solid var(--border);
 }
 
-footer.site {
-    text-align: center;
-    padding: 28px 20px;
-    color: var(--muted);
-    font-size: 0.82rem;
-    border-top: 1px solid var(--border);
-}
