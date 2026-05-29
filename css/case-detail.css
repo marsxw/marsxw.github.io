@@ -129,6 +129,13 @@ nav .brand:hover {
     font-size: 0.9rem;
 }
 
+.demo-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
 .figure-video {
     width: 100%;
     max-width: 380px;
