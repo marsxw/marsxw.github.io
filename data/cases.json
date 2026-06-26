@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T06:10:51.173Z",
+  "generatedAt": "2026-06-26T06:43:34.467Z",
   "categories": [
     "电路",
     "工控",
@@ -21,8 +21,8 @@
       "id": "260515tidybot机器人",
       "title": "260515tidybot机器人",
       "category": "",
-      "summary": "为客户开发的一个基于diffusion policy的模拟学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
-      "intro": "为客户开发的一个基于diffusion policy的模拟学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
+      "summary": "为客户开发的一个基于diffusion policy的模仿学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
+      "intro": "为客户开发的一个基于diffusion policy的模仿学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
       "cover": "assets/260515tidybot机器人/cover.jpg",
       "images": [],
       "videos": [
