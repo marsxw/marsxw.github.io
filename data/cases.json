@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-06-26T05:11:02.186Z",
+  "categories": [
+    "电路",
+    "工控",
+    "机械臂",
+    "移动平台"
+  ],
+  "cases": [
+    {
+      "id": "260520桌面贴片机",
+      "title": "260520桌面贴片机",
+      "category": "电路",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260520桌面贴片机/cover.jpg",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "260515家庭服务复合机器人",
+      "title": "260515家庭服务复合机器人",
+      "category": "机械臂",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260515家庭服务复合机器人/cover.jpg",
+      "images": [],
+      "videos": [
+        {
+          "name": "7e6454c35afb48c4beb0dae38b3fb5f8.mp4",
+          "path": "assets/260515家庭服务复合机器人/7e6454c35afb48c4beb0dae38b3fb5f8.mp4",
+          "type": "mp4"
+        }
+      ]
+    },
+    {
+      "id": "260510_阻值分析仪",
+      "title": "260510_阻值分析仪",
+      "category": "电路",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260510_阻值分析仪/cover.jpg",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "260415蘑菇采摘机器人",
+      "title": "260415蘑菇采摘机器人",
+      "category": "机械臂",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260415蘑菇采摘机器人/cover.jpg",
+      "images": [],
+      "videos": [
+        {
+          "name": "视频1.mp4",
+          "path": "assets/260415蘑菇采摘机器人/视频1.mp4",
+          "type": "mp4"
+        }
+      ]
+    },
+    {
+      "id": "260310真空控压算法",
+      "title": "260310真空控压算法",
+      "category": "工控",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260310真空控压算法/cover.jpg",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "260309数字讲解人",
+      "title": "260309数字讲解人",
+      "category": "工控",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260309数字讲解人/cover.jpg",
+      "images": [],
+      "videos": [
+        {
+          "name": "视频1.mp4",
+          "path": "assets/260309数字讲解人/视频1.mp4",
+          "type": "mp4"
+        }
+      ]
+    },
+    {
+      "id": "260203工业移动底盘",
+      "title": "260203工业移动底盘",
+      "category": "移动平台",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/260203工业移动底盘/cover.jpg",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "251202机械手控制",
+      "title": "251202机械手控制",
+      "category": "机械臂",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/251202机械手控制/cover.jpg",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "251003双足机器人仿真",
+      "title": "251003双足机器人仿真",
+      "category": "机械臂",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/251003双足机器人仿真/cover.png",
+      "images": [],
+      "videos": [
+        {
+          "name": "视频1.webm",
+          "path": "assets/251003双足机器人仿真/视频1.webm",
+          "type": "webm"
+        },
+        {
+          "name": "视频2.mp4",
+          "path": "assets/251003双足机器人仿真/视频2.mp4",
+          "type": "mp4"
+        }
+      ]
+    },
+    {
+      "id": "250206底盘控制算法仿真",
+      "title": "250206底盘控制算法仿真",
+      "category": "移动平台",
+      "summary": "",
+      "intro": "",
+      "cover": "assets/250206底盘控制算法仿真/cover.png",
+      "images": [],
+      "videos": [
+        {
+          "name": "视频1.webm",
+          "path": "assets/250206底盘控制算法仿真/视频1.webm",
+          "type": "webm"
+        },
+        {
+          "name": "视频2.webm",
+          "path": "assets/250206底盘控制算法仿真/视频2.webm",
+          "type": "webm"
+        }
+      ]
+    }
+  ]
+}

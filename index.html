@@ -285,6 +285,27 @@
             font-size: 0.85rem;
         }
 
+        .case-thumb-placeholder {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .cases-empty {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.92rem;
+            padding: 32px 16px;
+            grid-column: 1 / -1;
+        }
+
+        .cases-empty code {
+            font-size: 0.88em;
+            padding: 0.12em 0.4em;
+            border-radius: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
         /* Contact footer */
         .site-contact {
             margin-top: 48px;
@@ -440,204 +461,12 @@
         <section id="cases" class="block">
             <h2>案例展示</h2>
 
-            <div class="filters" role="tablist" aria-label="案例分类">
+            <div class="filters" id="cases-filters" role="tablist" aria-label="案例分类">
                 <button type="button" class="active" data-filter="all">全部</button>
-                <button type="button" data-filter="工控">工控</button>
-                <button type="button" data-filter="移动平台">移动平台</button>
-                <button type="button" data-filter="机械臂">机械臂</button>
-                <button type="button" data-filter="电路">电路</button>
             </div>
 
-            <div class="cases">
-                <article class="case-card" data-category="移动平台">
-                    <a class="case-card-link" href="cases/250206底盘控制算法仿真.html">
-                        <div class="case-thumb">
-                            <img src="assets/250206底盘控制算法仿真/cover.png" alt="底盘控制算法仿真项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">移动平台</span>
-                            </div>
-                            <h3>底盘控制算法仿真（250206）</h3>
-                            <p class="desc">底盘控制算法仿真与验证相关交付；含两段演示视频。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="机械臂">
-                    <a class="case-card-link" href="cases/251003双足机器人仿真.html">
-                        <div class="case-thumb">
-                            <img src="assets/251003双足机器人仿真/cover.png" alt="双足机器人仿真项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">机械臂</span>
-                            </div>
-                            <h3>双足机器人仿真（251003）</h3>
-                            <p class="desc">双足机器人运动与控制仿真相关交付；含两段演示视频。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="机械臂">
-                    <a class="case-card-link" href="cases/251202机械手控制.html">
-                        <div class="case-thumb">
-                            <img src="assets/251202机械手控制/cover.jpg" alt="机械手控制项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">机械臂</span>
-                            </div>
-                            <h3>机械手控制（251202）</h3>
-                            <p class="desc">机械手运动与控制相关交付；简介可按实际项目改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="移动平台">
-                    <a class="case-card-link" href="cases/260203工业移动底盘.html">
-                        <div class="case-thumb">
-                            <img src="assets/260203工业移动底盘/cover.jpg" alt="工业移动底盘项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">移动平台</span>
-                            </div>
-                            <h3>工业移动底盘（260203）</h3>
-                            <p class="desc">工业移动底盘结构与驱动相关交付；简介可按实际项目改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="工控">
-                    <a class="case-card-link" href="cases/260309数字讲解人.html">
-                        <div class="case-thumb">
-                            <img src="assets/260309数字讲解人/cover.jpg" alt="数字讲解人项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">工控</span>
-                            </div>
-                            <h3>数字讲解人（260309）</h3>
-                            <p class="desc">数字讲解与交互展示相关交付；简介可按实际项目改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="工控">
-                    <a class="case-card-link" href="cases/260310真空控压算法.html">
-                        <div class="case-thumb">
-                            <img src="assets/260310真空控压算法/cover.jpg" alt="真空控压算法项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">工控</span>
-                            </div>
-                            <h3>真空控压算法（260310）</h3>
-                            <p class="desc">真空环境下的压力控制与算法调试相关交付；可按实际合同补充一句对外表述。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="机械臂">
-                    <a class="case-card-link" href="cases/260415蘑菇采摘机器人.html">
-                        <div class="case-thumb">
-                            <img src="assets/260415蘑菇采摘机器人/cover.jpg" alt="蘑菇采摘机器人项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">机械臂</span>
-                            </div>
-                            <h3>蘑菇采摘机器人（260415）</h3>
-                            <p class="desc">采摘执行机构与电控联调类项目；简介可按验收范围自行改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="电路">
-                    <a class="case-card-link" href="cases/260510_阻值分析仪.html">
-                        <div class="case-thumb">
-                            <img src="assets/260510_阻值分析仪/cover.jpg" alt="阻值分析仪项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">电路</span>
-                            </div>
-                            <h3>阻值分析仪（260510）</h3>
-                            <p class="desc">阻值测量与分析相关硬件或整机交付；描述可替换为对外宣传用语。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="机械臂">
-                    <a class="case-card-link" href="cases/260515家庭服务复合机器人.html">
-                        <div class="case-thumb">
-                            <img src="assets/260515家庭服务复合机器人/cover.jpg" alt="家庭服务复合机器人项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">机械臂</span>
-                            </div>
-                            <h3>家庭服务复合机器人（260515）</h3>
-                            <p class="desc">家庭场景下的复合机器人相关交付；简介可按实际项目改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="case-card" data-category="电路">
-                    <a class="case-card-link" href="cases/260520桌面贴片机.html">
-                        <div class="case-thumb">
-                            <img src="assets/260520桌面贴片机/cover.jpg" alt="桌面贴片机项目封面" width="1600" height="1000"
-                                loading="lazy" decoding="async">
-                        </div>
-                        <div class="case-body">
-                            <div class="case-meta">
-                                <span class="tag">电路</span>
-                            </div>
-                            <h3>桌面贴片机（260520）</h3>
-                            <p class="desc">桌面级贴片设备相关交付；简介可按实际项目改写。</p>
-                            <div class="case-links">
-                                <span class="go-detail">查看详情 →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+            <div class="cases" id="cases-grid">
+                <p class="cases-empty">加载案例列表…</p>
             </div>
         </section>
 
@@ -680,27 +509,8 @@
         </footer>
     </main>
 
-    <script>
-        (function () {
-            var buttons = document.querySelectorAll(".filters button");
-            var cards = document.querySelectorAll(".case-card");
-
-            buttons.forEach(function (btn) {
-                btn.addEventListener("click", function () {
-                    var filter = btn.getAttribute("data-filter");
-
-                    buttons.forEach(function (b) { b.classList.remove("active"); });
-                    btn.classList.add("active");
-
-                    cards.forEach(function (card) {
-                        var cat = card.getAttribute("data-category");
-                        var show = filter === "all" || cat === filter;
-                        card.classList.toggle("hidden", !show);
-                    });
-                });
-            });
-        })();
-    </script>
+    <script src="js/cases-shared.js"></script>
+    <script src="js/index-cases.js"></script>
 </body>
 
 </html>
