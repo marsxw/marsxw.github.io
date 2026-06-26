@@ -23,20 +23,27 @@
           '<p class="cases-empty">未找到案例「' +
           S.escapeHtml(id) +
           "」。请重新运行构建脚本后刷新。</p>";
-        document.title = "案例未找到 — 仟鑫科技";
+        document.title = "案例未找到 — 茂名仟鑫科技";
         return;
       }
 
-      document.title = c.title + " — 仟鑫科技";
+      document.title = c.title + " — 茂名仟鑫科技";
       var meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute("content", c.summary || c.title);
 
       var tag = c.category
         ? '<span class="tag">' + S.escapeHtml(c.category) + "</span>"
         : "";
-      var lead = c.summary
-        ? '<p class="lead">' + S.escapeHtml(c.summary) + "</p>"
-        : "";
+      var introUnderTitle = "";
+      if (c.intro) {
+        introUnderTitle =
+          '<div class="intro-body intro-under-title">' +
+          S.renderIntroHtml(c.intro) +
+          "</div>";
+      } else if (c.summary) {
+        introUnderTitle =
+          '<p class="lead">' + S.escapeHtml(c.summary) + "</p>";
+      }
 
       var coverHtml = c.cover
         ? '<figure class="figure"><img src="' +
@@ -46,12 +53,6 @@
           ' 封面" decoding="async"></figure>'
         : "";
 
-      var introHtml = c.intro
-        ? '<section class="block"><h2>项目简介</h2><div class="intro-body">' +
-          S.renderIntroHtml(c.intro) +
-          "</div></section>"
-        : "";
-
       main.innerHTML =
         '<a class="back" href="index.html#cases">← 返回案例列表</a>' +
         '<header class="detail-header">' +
@@ -59,12 +60,11 @@
         "<h1>" +
         S.escapeHtml(c.title) +
         "</h1>" +
-        lead +
+        introUnderTitle +
         "</header>" +
         coverHtml +
         S.renderVideos(c.videos) +
-        S.renderGallery(c.images) +
-        introHtml;
+        S.renderGallery(c.images);
     })
     .catch(function () {
       main.innerHTML =

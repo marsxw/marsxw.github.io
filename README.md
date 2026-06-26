@@ -1,6 +1,6 @@
 # marsxw.github.io
 
-仟鑫科技 GitHub Pages 案例展示站。
+茂名仟鑫科技 GitHub Pages 案例展示站。
 
 ## 添加 / 修改案例（只需改 `assets/`）
 

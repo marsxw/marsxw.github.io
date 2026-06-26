@@ -104,6 +104,21 @@ nav .brand:hover {
     font-size: 1.05rem;
 }
 
+.detail-header .intro-under-title {
+    margin-top: 4px;
+}
+
+.detail-header .intro-under-title p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.detail-header .intro-under-title p:last-child {
+    margin-bottom: 0;
+}
+
 .figure {
     margin: 0 0 32px;
     border-radius: var(--radius);
@@ -132,29 +147,27 @@ nav .brand:hover {
 .demo-videos {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    align-items: center;
+    gap: 18px;
+    width: 100%;
 }
 
 .figure-video {
     width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
+    margin: 0;
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--border);
     background: #0a0d11;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
 .figure-video video {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: min(72vh, 720px);
     object-fit: contain;
     display: block;
+    vertical-align: middle;
 }
 
 section.block {
