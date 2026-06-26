@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T05:11:34.757Z",
+  "generatedAt": "2026-06-26T05:16:54.541Z",
   "categories": [
     "电路",
     "工控",
@@ -18,17 +18,17 @@
       "videos": []
     },
     {
-      "id": "260515家庭服务复合机器人",
-      "title": "260515家庭服务复合机器人",
-      "category": "机械臂",
-      "summary": "",
-      "intro": "",
-      "cover": "assets/260515家庭服务复合机器人/cover.jpg",
+      "id": "260515tidybot机器人",
+      "title": "260515tidybot机器人",
+      "category": "",
+      "summary": "为客户开发的一个基于diffusion policy的模拟学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
+      "intro": "为客户开发的一个基于diffusion policy的模拟学习机器人样机，采集少量的数据，快速迁移到真机上运行。",
+      "cover": "assets/260515tidybot机器人/cover.jpg",
       "images": [],
       "videos": [
         {
-          "name": "7e6454c35afb48c4beb0dae38b3fb5f8.mp4",
-          "path": "assets/260515家庭服务复合机器人/7e6454c35afb48c4beb0dae38b3fb5f8.mp4",
+          "name": "视频1.mp4",
+          "path": "assets/260515tidybot机器人/视频1.mp4",
           "type": "mp4"
         }
       ]
